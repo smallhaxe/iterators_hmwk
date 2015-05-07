@@ -15,7 +15,18 @@
         }
     }
     // myUtils.myMap
+    myUtils.myMap = function myMap(arr, cb) {
+        var mappedArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            mappedArr[i] = cb(arr[i], i, arr);
+        }
+        return mappedArr;
+    }
+    
     // myUtils.myReduce
+    myUtils.myReduce = function myReduce(arr, cb, initVal) {
+        return (initVal === undefined) ? initVal + cb(
+    }
     
     // myUtils.buildElement
     
